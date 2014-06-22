@@ -11,6 +11,7 @@ Find the sum of all the even-valued terms in the sequence which do not exceed fo
 Result
 ---
 
+4613732
 
 
 Reference
