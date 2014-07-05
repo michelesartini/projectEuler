@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		List<Integer> primes = primeFactors(lpfNumber);
-		int largestPrimeNumber = findGreatestNumber(primes);
+		int largestPrimeNumber = Collections.max(primes);
 		System.out.println("The largest prime factor of " + lpfNumber + " is: " + largestPrimeNumber);
 	}
 
@@ -53,18 +54,4 @@ public class Main {
 		
 		return primes;
 	}
-	
-	private static int findGreatestNumber(List<Integer> primes) {
-		long start = System.currentTimeMillis();
-		int largest = primes.get(0);
-		for (int prime : primes) {
-			largest = (prime > largest) ? prime : largest;
-		}
-		long finish = System.currentTimeMillis();
-		start = finish / start;
-		System.out.println("Finding the greatest number took: " + start + "(ms)");
-		
-		return largest;
-	}
-
 }
