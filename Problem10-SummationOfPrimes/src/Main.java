@@ -17,20 +17,33 @@ import java.util.List;
 public class Main {
 	
 	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-
+		
 		int maxValue = parseArgument(args);
+		
+		long start = System.currentTimeMillis();
 		PrimeNumberGeneratorUntilValue primeGenerator = new PrimeNumberGeneratorUntilValue();
 		List<Integer> primes = primeGenerator.primeNumberGenerator4(maxValue);
+		System.out.printf("Sum: %8.0f \n", getSum(primes));
+		long end = System.currentTimeMillis();
+		end = end - start;
+		System.out.println("1st execution time: " + end + "(ms)");
+		
+		start = System.currentTimeMillis();
+		PrimeNumberSieve sieve = new PrimeNumberSieve();
+		primes = sieve.atkinSieve(maxValue);
+		System.out.printf("Sum: %8.0f \n", getSum(primes));
+		end = System.currentTimeMillis();
+		end = end - start;
+		System.out.println("2nd execution time: " + end + "(ms)");
+		
+	}
+	
+	private static Double getSum(List<Integer> primes) {
 		Double result = 0d;
 		for (Integer value : primes) {
 			result += value;
 		}
-		System.out.printf("Sum: %8.0f \n", result);
-		
-		long end = System.currentTimeMillis();
-		end = end - start;
-		System.out.println("Execution time: " + end + "(ms)");
+		return result;
 	}
 	
 	private static int parseArgument(String[] args) {
