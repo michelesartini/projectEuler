@@ -58,20 +58,18 @@ public class PrimeNumberGenerator {
 		int primeNumber = 2;
 		
 		List<Integer> expectedPrime = new ArrayList<Integer>();
-		List<Integer> testPrime = new ArrayList<Integer>();
 		
 		expectedPrime.add(primeNumber);
-		testPrime.add(primeNumber);
 		primeNumber += 1;
-		testPrime.add(primeNumber);
+		expectedPrime.add(primeNumber);
 		
-		while (testPrime.size() < limit) {
+		while (expectedPrime.size() < limit) {
 			primeNumber += 2;
 			test = true;
 			
 			double sqrtPrimeP = Math.sqrt(primeNumber);
 			
-			for (int prime : testPrime) {
+			for (int prime : expectedPrime) {
 				if (prime > sqrtPrimeP) {
 					break;
 				}
@@ -83,11 +81,10 @@ public class PrimeNumberGenerator {
 			}
 			
 			if (test) {
-				testPrime.add(primeNumber);
+				expectedPrime.add(primeNumber);
 			}
 		}
-		Collections.reverse(expectedPrime);
-		testPrime.addAll(0, expectedPrime);
-		return testPrime;
+//		Collections.reverse(expectedPrime);
+		return expectedPrime;
 	}
 }
