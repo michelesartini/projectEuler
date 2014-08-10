@@ -147,6 +147,12 @@ public class Main {
 		return product;
 	}
 	
+	/**
+	 * Multi-threaded version of the above algorithm.
+	 * It uses an executor service to run each thread.
+	 * 
+	 * @return
+	 */
 	public static Double findLargestProductMultiThreaded() {
 		Double product = 1d;
 		int numberOfThreads = ROW - ADIACENT_NUMBERS;
@@ -163,8 +169,7 @@ public class Main {
 		try {
 			tasks.addAll(executorService.invokeAll(lst));
 	
-			for(Future<Double> task : tasks)
-	        {
+			for (Future<Double> task : tasks) {
 	            product = product < task.get() ? task.get() : product;
 	        }
 		} catch (InterruptedException e) {
