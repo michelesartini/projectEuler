@@ -37,7 +37,7 @@ import java.util.concurrent.Callable;
  * 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
  * 52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
  * 
- * The greates product it is stored in the "product" class attribute.
+ * The greatest product its stored in the "product" class attribute.
  * 
  *  
  * @author michelesartini
