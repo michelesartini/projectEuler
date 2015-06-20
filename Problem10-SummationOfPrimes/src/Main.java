@@ -1,4 +1,6 @@
 
+import net.projecteuler.primenumber.PrimeNumberSieveTest;
+
 import java.util.List;
 
 /**
@@ -29,13 +31,11 @@ public class Main {
 		System.out.println("1st execution time: " + end + "(ms)");
 		
 		start = System.currentTimeMillis();
-		PrimeNumberSieve sieve = new PrimeNumberSieve();
-		primes = sieve.atkinSieve(maxValue);
+		primes = PrimeNumberSieveTest.atkinSieve(maxValue);
 		System.out.printf("Sum: %8.0f \n", getSum(primes));
 		end = System.currentTimeMillis();
 		end = end - start;
 		System.out.println("2nd execution time: " + end + "(ms)");
-		
 	}
 	
 	private static Double getSum(List<Integer> primes) {

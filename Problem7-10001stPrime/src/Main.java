@@ -1,3 +1,5 @@
+import net.projecteuler.primenumber.PrimeNumberGenerator;
+
 import java.util.Collections;
 import java.util.List;
 

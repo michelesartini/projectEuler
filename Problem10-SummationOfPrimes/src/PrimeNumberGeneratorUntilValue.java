@@ -1,14 +1,16 @@
+import net.projecteuler.primenumber.PrimeNumberGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class PrimeNumberGeneratorUntilValue extends PrimeNumberGenerator{
+public class PrimeNumberGeneratorUntilValue extends PrimeNumberGenerator {
 
 	/**
 	 * PGsimple4
 	 * Generates prime number until the prime is lower than the parameter passed as input.
 	 * 
-	 * @param limit
+	 * @param maxValue
 	 */
 	public List<Integer> primeNumberGenerator4(int maxValue) {
 		boolean test = true;
