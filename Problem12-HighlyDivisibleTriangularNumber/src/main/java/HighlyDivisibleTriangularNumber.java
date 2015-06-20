@@ -40,8 +40,6 @@ public class HighlyDivisibleTriangularNumber {
     }
 
     private static List<Integer> process(List<Integer> primeList) {
-//        Set<Integer> div;
-//        List<Integer> divisors = new ArrayList<Integer>();
         int div = 0;
         int number = 4;
 
@@ -53,9 +51,8 @@ public class HighlyDivisibleTriangularNumber {
             }
         }
         long end = System.currentTimeMillis();
+
         System.out.println(String.format("The triangle number with more than %d divisors is: %d", LIMIT, number));
-//        Collections.sort(divisors);
-//        System.out.println("Divisors " + divisors);
 
         end = end - start;
         System.out.println("Execution time: " + end + "(ms)");
