@@ -2,10 +2,7 @@ import net.projecteuler.NumberDivisors;
 import net.projecteuler.TriangularNumber;
 import net.projecteuler.primenumber.PrimeNumberSieve;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Problem 12
@@ -39,7 +36,7 @@ public class HighlyDivisibleTriangularNumber {
         process(primeList);
     }
 
-    private static List<Integer> process(List<Integer> primeList) {
+    private static void process(List<Integer> primeList) {
         int div = 0;
         int number = 4;
 
@@ -56,7 +53,6 @@ public class HighlyDivisibleTriangularNumber {
 
         end = end - start;
         System.out.println("Execution time: " + end + "(ms)");
-        return null;
     }
 
 }
