@@ -24,7 +24,7 @@ What is the value of the first triangle number to have over five hundred divisor
 Result
 ---
 
-76576501
+76576500
 
 References
 ---

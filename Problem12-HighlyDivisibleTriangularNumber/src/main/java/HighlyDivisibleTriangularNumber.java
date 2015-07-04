@@ -41,7 +41,8 @@ public class HighlyDivisibleTriangularNumber {
         int number = 4;
 
         long start = System.currentTimeMillis();
-        for (; div < LIMIT; number++) {
+        while (div < LIMIT) {
+            number++;
             if (TriangularNumber.isTriangularNumber(number)) {
                 System.out.println(String.format("Processing number: %d", number));
                 div = NumberDivisors.numberDivisorsPrimeFactor(number, primeList);
