@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>projectEuler-Miki</groupId>
-    <artifactId>projectEuler-problem14</artifactId>
+    <artifactId>projectEuler-Problem14</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
